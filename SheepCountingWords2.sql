@@ -1,0 +1,24 @@
+SELECT  Number, Word
+      FROM
+      OpenJson('[{
+    "number": 11,  "word": "Yan-a-dik"
+  }, {
+    "number": 12,  "word": "Tan-a-dik"
+  }, {
+    "number": 13,  "word": "Tethera-dik"
+  }, {
+    "number": 14,  "word": "Pethera-dik"
+  }, {
+    "number": 15,  "word": "Bumfit"
+  }, {
+    "number": 16,  "word": "Yan-a-bumtit"
+  }, {
+    "number": 17,  "word": "Tan-a-bumfit"
+  }, {
+    "number": 18,  "word": "Tethera-bumfit"
+  }, {
+    "number": 19,  "word": "Pethera-bumfit"
+  }, {
+    "number": 20,  "word": "Figgot"
+  }] '
+  )WITH (Number INT '$.number', Word VARCHAR(30) '$.word')
